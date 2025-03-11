@@ -25,3 +25,15 @@ print(suma)
 for kr in sorted(slownik.items()):
     print(kr[0], ":", kr[1],round(100*kr[1]/suma,2), "%")
 
+samogloski = 'AEIOUY'
+maks = 0
+for slowo in lista_napisow:
+    n = 0
+    for litera in slowo:
+        if litera not in samogloski:
+            n+=1
+            if n > maks:
+                maks = n
+            else:
+                n = 0
+print(maks)
